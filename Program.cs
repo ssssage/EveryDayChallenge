@@ -22,6 +22,14 @@ namespace TheChallenge
             listNode.PrintList();
 
             Console.WriteLine();
+            Console.WriteLine("\nAfter LinkedList.Print()");
+            LinkedList linkedList = new LinkedList();
+            linkedList.AddToEnd(1);
+            linkedList.AddToEnd(2);
+            linkedList.AddToEnd(2);
+            linkedList.AddToEnd(3);
+            linkedList.Print();
+            Console.WriteLine();
 
         }
 

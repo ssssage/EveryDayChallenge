@@ -61,4 +61,34 @@ namespace TheChallenge
     }
 
    
+    public class LinkedList
+    {
+         public ListNode head;
+
+        public LinkedList()
+        {
+            head = null;
+        }
+        public void AddToEnd(int data)
+        {
+            if (head == null)
+            {
+                head = new ListNode(data);
+            }
+
+            else
+            {
+                head.AddToEnd(data);
+            }
+        }
+
+        public void Print()
+        {
+            if (head != null)
+            {
+                head.PrintList();
+            }
+        }
+
+    }
 }

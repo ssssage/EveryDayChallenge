@@ -69,6 +69,20 @@ namespace TheChallenge
         {
             head = null;
         }
+
+        public void AddToFront(int data)
+        {
+            if (head == null)
+            {
+                head = new ListNode(data);
+            }
+            else
+            {
+                ListNode temp = new ListNode(data);
+                temp.next = head;
+                head = temp;
+            }
+        }
         public void AddToEnd(int data)
         {
             if (head == null)

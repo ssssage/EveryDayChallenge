@@ -28,8 +28,20 @@ namespace TheChallenge
             linkedList.AddToEnd(2);
             linkedList.AddToEnd(2);
             linkedList.AddToEnd(3);
+            linkedList.AddToFront(4);
             linkedList.Print();
             Console.WriteLine();
+
+            Console.WriteLine("\nAfter LinkedList.AddToFront()");
+            LinkedList linkedList1 = new LinkedList();
+            linkedList1.AddToEnd(4);
+            linkedList1.AddToFront(1);
+            linkedList1.AddToFront(2);
+            linkedList1.AddToFront(2);
+            linkedList1.AddToFront(3);
+            linkedList1.Print();
+            Console.WriteLine();
+           
 
         }
 

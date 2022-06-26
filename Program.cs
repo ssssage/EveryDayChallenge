@@ -41,7 +41,18 @@ namespace TheChallenge
             linkedList1.AddToFront(3);
             linkedList1.Print();
             Console.WriteLine();
-           
+
+
+            Console.WriteLine("\nAfter LinkedList.AddSorted()");
+            LinkedList linkedList12 = new LinkedList();
+            linkedList12.AddSorted(5);
+            linkedList12.AddSorted(4);
+            linkedList12.AddSorted(1);
+            linkedList12.AddSorted(2);
+            linkedList12.AddSorted(2);
+            linkedList12.AddSorted(3);
+            linkedList12.Print();
+            Console.WriteLine();
 
         }
 

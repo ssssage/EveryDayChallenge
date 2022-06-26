@@ -58,12 +58,30 @@ namespace TheChallenge
             return head;
         }
 
+        public void AddSorted(int data)
+        {
+            if (next == null)
+            {
+                next = new ListNode(data);
+            }
+            else if (data < next.data)
+            {
+                ListNode temp = new ListNode(data);
+                temp.next = this.next;
+                this.next = temp;
+            }
+
+            else
+            {
+                next.AddSorted(data);
+            }
+        }
     }
 
    
     public class LinkedList
     {
-         public ListNode head;
+        public ListNode head;
 
         public LinkedList()
         {
@@ -83,6 +101,7 @@ namespace TheChallenge
                 head = temp;
             }
         }
+        
         public void AddToEnd(int data)
         {
             if (head == null)
@@ -93,6 +112,23 @@ namespace TheChallenge
             else
             {
                 head.AddToEnd(data);
+            }
+        }
+
+        public void AddSorted(int data)
+        {
+            if (head == null)
+            {
+                head = new ListNode(data);
+            }
+            else if (data < head.data)
+            {
+                AddToFront(data);
+            }
+
+            else
+            {
+                head.AddSorted(data);
             }
         }
 
